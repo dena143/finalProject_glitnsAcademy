@@ -1,6 +1,7 @@
-GUYS, KALO MAU NGEPUSH, PULL DULU YA !!
-JANGAN LUPA BACK UP DI LOCAL JUGA !
+Final Project Glints Academy
 
---- Perubahan ---
+My Task:
 
-- nambah kolom amount2 di tabel donate
+- User API
+- Donate API
+- Unit Testing
