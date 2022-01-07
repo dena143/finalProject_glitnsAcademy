@@ -1,0 +1,26 @@
+image: node:16
+
+stages:
+  - test
+  - production
+
+test:
+  type: test
+  stage: test
+  services:
+    - postgres:latest
+  script:
+    - npm install
+    - npm run test
+  only:
+    - development
+
+production:
+  type: deploy
+  stage: production
+  image: ruby:latest
+  script:
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP --api-key=$HEROKU_API_KEY
+  only:
+    - development
